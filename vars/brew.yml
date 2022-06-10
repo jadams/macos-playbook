@@ -1,0 +1,31 @@
+---
+brew_packages:
+  - croc
+  - docker
+  - docker-compose
+  - helm
+  - kubernetes-cli
+  - neofetch
+  - starship
+  - zstd
+brew_casks:
+  - discord
+  - firefox
+  - google-chrome
+  - google-drive
+  - iterm2
+  - little-snitch
+  - micro-snitch
+  - microsoft-teams
+  - miniforge
+  - moonlight
+  - multipass
+  - signal
+  - steam
+  - tunnelblick
+  - utm
+  - visual-studio-code
+  - vmware-horizon-client
+  - vnc-viewer
+  - wireshark
+  - xquartz
