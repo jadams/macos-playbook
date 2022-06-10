@@ -4,7 +4,6 @@ brew_packages:
   - croc
   - docker
   - docker-compose
-  - gnu-sed
   - gnu-tar
   - gnupg
   - helm
