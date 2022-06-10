@@ -1,3 +1,4 @@
+---
 - name: Add lines to zshrc
   ansible.builtin.blockinfile:
     path: "{{ ansible_env.HOME }}/.zshrc"

@@ -1,3 +1,4 @@
+---
 - name: Add dot files
   ansible.builtin.blockinfile:
     path: "{{ ansible_env.HOME }}/{{ item.path }}"

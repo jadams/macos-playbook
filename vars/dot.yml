@@ -1,3 +1,4 @@
+---
 dot_files:
   - path: ".config/starship.toml"
     content: |
