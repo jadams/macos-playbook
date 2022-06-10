@@ -1,13 +1,19 @@
 ---
 brew_packages:
+  - colima
   - croc
   - docker
   - docker-compose
+  - gnu-sed
+  - gnu-tar
   - gnupg
   - helm
+  - jq
   - kubernetes-cli
+  - lima
   - neofetch
   - pinentry-mac
+  - ripgrep
   - starship
   - wget
   - zstd
