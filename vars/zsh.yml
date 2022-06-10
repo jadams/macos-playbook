@@ -1,0 +1,5 @@
+---
+zshrc_lines:
+  - eval "$(starship init zsh)"
+zshrc_aliases:
+  - ls='ls -GF'

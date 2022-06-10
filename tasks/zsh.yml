@@ -1,0 +1,5 @@
+- name: Add lines to zshrc
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_env.HOME }}/.zshrc"
+    line: "{{ item }}"
+  loop: "{{ zshrc_lines }}"
