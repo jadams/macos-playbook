@@ -3,10 +3,13 @@ brew_packages:
   - croc
   - docker
   - docker-compose
+  - gnupg
   - helm
   - kubernetes-cli
   - neofetch
+  - pinentry-mac
   - starship
+  - wget
   - zstd
 brew_casks:
   - discord
