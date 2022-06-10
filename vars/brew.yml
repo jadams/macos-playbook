@@ -11,6 +11,7 @@ brew_packages:
   - jq
   - kubernetes-cli
   - lima
+  - mas
   - neofetch
   - pinentry-mac
   - ripgrep
