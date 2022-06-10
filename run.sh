@@ -3,6 +3,8 @@ set -euo pipefail
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
+sudo -l | tail -2
+
 if ! which brew &>/dev/null; then
     $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
 fi
