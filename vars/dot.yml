@@ -1,0 +1,13 @@
+dot_files:
+  - path: ".config/starship.toml"
+    content: |
+      add_newline = false
+      [line_break]
+      disabled = true
+  - path: ".gitconfig"
+    content: |
+      [user]
+        email = {{ git_email }}
+        name = {{ git_name }}
+  - path: ".ssh/authorized_keys"
+    content: "{{ lookup('url', 'https://github.com/' + git_username + '.keys', split_lines=False) }}"
