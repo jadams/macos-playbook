@@ -1,5 +1,9 @@
 ---
 zshrc_lines:
   - eval "$(starship init zsh)"
+  - eval "$(/opt/homebrew/bin/brew shellenv)"
+  - export GPG_TTY="$(tty)"
+  - export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  - gpgconf --launch gpg-agent
 zshrc_aliases:
   - ls='ls -GF'

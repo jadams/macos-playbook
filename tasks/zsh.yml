@@ -1,5 +1,11 @@
 - name: Add lines to zshrc
-  ansible.builtin.lineinfile:
+  ansible.builtin.blockinfile:
     path: "{{ ansible_env.HOME }}/.zshrc"
-    line: "{{ item }}"
-  loop: "{{ zshrc_lines }}"
+    insertbefore: BOF
+    block: |
+        {% for line in zshrc_lines %}
+        {{ line }}
+        {% endfor %}
+        {% for alias in zshrc_aliases %}
+        alias {{ alias }}
+        {% endfor %}
