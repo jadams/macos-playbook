@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - set_fact:
+        tasks_vars: "{{ ( tasks_vars|default([]) + [ item | basename ] ) | unique }}"
+      with_fileglob:
+        - tasks/*.yml
+        - vars/*.yml
+    - include_vars: "vars/{{ item }}"
+      loop: "{{ tasks_vars }}"
+    - include_tasks: "tasks/{{ item }}"
+      loop: "{{ tasks_vars }}"
