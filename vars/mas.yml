@@ -1,10 +1,18 @@
 ---
 mas_apps:
-  - { id: 1440147259, name: "AdGuard for Safari" }
-  - { id: 1333542190, name: "1Password 7" }
-  - { id: 441258766, name: "Magnet" }
-  - { id: 1295203466, name: "Microsoft Remote Desktop" }
-  - { id: 1452453066, name: "Hidden Bar" }
-  - { id: 1451685025, name: "WireGuard" }
-  - { id: 803453959, name: "Slack" }
-  - { id: 1475387142, name: "Tailscale" }
+  - id: 1440147259
+    name: "AdGuard for Safari"
+  - id: 1333542190
+    name: "1Password 7"
+  - id: 441258766
+    name: "Magnet"
+  - id: 1295203466
+    name: "Microsoft Remote Desktop"
+  - id: 1452453066
+    name: "Hidden Bar"
+  - id: 1451685025
+    name: "WireGuard"
+  - id: 803453959
+    name: "Slack"
+  - id: 1475387142
+    name: "Tailscale"

@@ -1,7 +1,7 @@
 ---
 - name: Upgrade all installed Mac App Store apps
   community.general.mas:
-    upgrade_all: yes
+    upgrade_all: true
 - name: Install Mac App Store apps
   community.general.mas:
     id: "{{ mas_apps | map(attribute='id') }}"

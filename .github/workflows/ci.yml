@@ -1,9 +1,9 @@
 ---
 name: CI
 
-on:
+"on":
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
 
@@ -43,7 +43,8 @@ jobs:
 
       - name: Uninstall GitHub Actions' built-in Homebrew.
         run: |
-          curl -sLO https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh
+          curl -sLO \
+          https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh
           sudo bash uninstall.sh --force
           sudo rm -rf /usr/local/Homebrew
           sudo rm -rf /usr/local/Caskroom
@@ -62,7 +63,11 @@ jobs:
       - name: Idempotence check.
         run: |
           idempotence=$(mktemp)
-          bash run.sh | tee -a ${idempotence}
-          tail ${idempotence} | grep -q 'changed=0.*failed=0' && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)
+          bash run.sh | \
+          tee -a ${idempotence}
+          tail ${idempotence} | \
+          grep -q 'changed=0.*failed=0' && \
+          (echo 'Idempotence test: pass' && exit 0) || \
+          (echo 'Idempotence test: fail' && exit 1)
         env:
           ANSIBLE_FORCE_COLOR: '1'

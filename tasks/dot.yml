@@ -3,5 +3,5 @@
   ansible.builtin.blockinfile:
     path: "{{ ansible_env.HOME }}/{{ item.path }}"
     block: "{{ item.content }}"
-    create: yes
+    create: true
   loop: "{{ dot_files }}"

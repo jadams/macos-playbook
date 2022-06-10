@@ -1,7 +1,7 @@
 ---
 - name: Update brew
   community.general.homebrew:
-    update_homebrew: yes
+    update_homebrew: true
 - name: Install brew packages
   community.general.homebrew:
     name: "{{ brew_packages }}"

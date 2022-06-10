@@ -1,4 +1,5 @@
 ---
+gh_keys_url: "{{ 'https://github.com/' + git_username + '.keys' }}"
 dot_files:
   - path: ".config/starship.toml"
     content: |
@@ -11,4 +12,4 @@ dot_files:
         email = {{ git_email }}
         name = {{ git_name }}
   - path: ".ssh/authorized_keys"
-    content: "{{ lookup('url', 'https://github.com/' + git_username + '.keys', split_lines=False) }}"
+    content: "{{ lookup('url', gh_keys_url, split_lines=False) }}"
